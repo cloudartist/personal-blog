@@ -24,4 +24,4 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: "eu-west-1"
       run: |
-        aws s3 cp index.html s3://marcin-blog
+        aws s3 cp src/* s3://marcin-blog
