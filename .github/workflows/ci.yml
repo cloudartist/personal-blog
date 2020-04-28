@@ -18,7 +18,8 @@ jobs:
         unzip awscliv2.zip > /dev/null 2>&1
         sudo ./aws/install > /dev/null 2>&1
 
-    - shell: bash
+    - name: Deploy app files to S3 hosting
+      shell: bash
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
