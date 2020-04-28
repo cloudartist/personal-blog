@@ -1,7 +1,7 @@
 name: S3Deploy
 on:
   push:
-    branches: [ master, feature/add-s3-autodeploy-with-github-actions ]
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
