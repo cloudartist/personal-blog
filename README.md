@@ -1,7 +1,7 @@
 # personal-blog
 Personal blog development 
 
-Repository aim is to be selfcontined, meaning it includes all needed code to build complete website. Prerequisit is have Power User access to an AWS account
+Repository aim is to be self contained, meaning it includes all needed code to build complete website. Main prerequisite is have Power User access to an AWS account. If you want to setup CI/CD then Github with Actions feature enabled is neccessary.
 
 ## Structure
 - Terraform (v0.12.x) to build a S3 bucket to host static webpage
@@ -21,4 +21,6 @@ aws s3 mb s3://bucket-name
 Terraform import bucket if you already create one
 ```
 terraform import aws_s3_bucket.bucket bucket-name
+# or Deploy User
+terraform import aws_iam_user.deploy_user DeployUser
 ```
