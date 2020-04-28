@@ -24,3 +24,7 @@ terraform import aws_s3_bucket.bucket bucket-name
 # or Deploy User
 terraform import aws_iam_user.deploy_user DeployUser
 ```
+
+## To Do 
+- Add CloudFront support 
+- Add Lambda@Egde support (with DynamoDB)
