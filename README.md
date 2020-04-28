@@ -26,5 +26,5 @@ terraform import aws_iam_user.deploy_user DeployUser
 ```
 
 ## To Do 
-- Add CloudFront support 
+- Add CloudFront support - see https://registry.terraform.io/modules/conortm/s3-static-website/aws/0.0.3
 - Add Lambda@Egde support (with DynamoDB)
