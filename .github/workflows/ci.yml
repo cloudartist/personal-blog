@@ -1,7 +1,7 @@
 name: S3Deploy
 on:
   push:
-    branches: [ master ]
+    branches: [ master, feature/*]
   pull_request:
     branches: [ master ]
 
@@ -25,4 +25,5 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: "eu-west-1"
       run: |
-        aws s3 cp src/* s3://marcin-blog
+        set -x
+        aws s3 cp src s3://marcin-blog --recursive

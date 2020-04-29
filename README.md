@@ -24,3 +24,12 @@ terraform import aws_s3_bucket.bucket bucket-name
 # or Deploy User
 terraform import aws_iam_user.deploy_user DeployUser
 ```
+
+Blog code inspired by - https://github.com/learning-zone/website-templates/tree/master/startbootstrap-clean-blog-1.0.2
+
+## To Do website code
+- Add mail support (SES?)
+
+## To Do infra
+- Add CloudFront support - see https://registry.terraform.io/modules/conortm/s3-static-website/aws/0.0.3
+- Add Lambda@Egde support (with DynamoDB)
