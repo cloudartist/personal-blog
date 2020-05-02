@@ -5,3 +5,12 @@
 #   secret_name      = "AWS_ACCESS_KEY"
 #   plaintext_value  = aws_iam_access_key.deploy_user_key.id
 # }
+
+
+resource "aws_ssm_parameter" "cf_secret" {
+  name  = "/PersonalBlog/CloudFrontSecrect"
+  type  = "SecureString"
+  value = "ChangeMeinParameterStore"
+
+  lifecycle { ignore_changes = [value] }
+}
