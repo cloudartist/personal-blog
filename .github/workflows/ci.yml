@@ -26,4 +26,4 @@ jobs:
         AWS_REGION: "eu-west-1"
       run: |
         set -x
-        aws s3 cp src s3://marcin-blog --recursive
+        aws s3 cp src s3://perception.ninja --recursive

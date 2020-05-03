@@ -1,6 +1,10 @@
 # personal-blog
 Personal blog development 
 
+### Deploy status [![Actions Status](https://github.com/mtaracha/personal-blog/workflows/S3Deploy
+/badge.svg)](https://github.com/mtaracha/personal-blog/actions)
+
+
 Repository aim is to be self contained, meaning it includes all needed code to build complete website. Main prerequisite is have Power User access to an AWS account. If you want to setup CI/CD then Github with Actions feature enabled is neccessary.
 
 ## Structure
@@ -8,6 +12,8 @@ Repository aim is to be self contained, meaning it includes all needed code to b
 - Github Actions (upload new s3 content on push to master)
 - HTML and JavaScript
 
+## Development guidelines
+- When working on infrastrcture development create `infra/*` branch which doesn't trigger app deployment
 
 ## Steps 
 
@@ -31,5 +37,4 @@ Blog code inspired by - https://github.com/learning-zone/website-templates/tree/
 - Add mail support (SES?)
 
 ## To Do infra
-- Add CloudFront support - see https://registry.terraform.io/modules/conortm/s3-static-website/aws/0.0.3
 - Add Lambda@Egde support (with DynamoDB)

@@ -3,7 +3,7 @@ resource "aws_iam_user" "deploy_user" {
   path = "/"
 
   tags = {
-    Name = "DeployUser"
+    Name    = "DeployUser"
     Creator = "Terraform"
   }
 }
