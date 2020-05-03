@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "blog" {
-  bucket = "marcin-blog"
+  bucket = "perception.ninja"
   acl    = "public-read"
 
   website {
@@ -20,7 +20,7 @@ resource "aws_s3_bucket_policy" "blog_policy" {
             "Sid": "PublicReadGetObject",
             "Effect": "Allow",
             "Principal": {
-                "AWS": "*"
+                "AWS": "${aws_cloudfront_origin_access_identity.origin_access_identity.iam_arn}"
             },
             "Action": "s3:GetObject",
             "Resource": "arn:aws:s3:::${aws_s3_bucket.blog.id}/*"
